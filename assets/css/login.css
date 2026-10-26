@@ -1,0 +1,1002 @@
+/* =========================================================
+   JAVERSTOCK
+   LOGIN
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef3f8;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   LADO IZQUIERDO
+   ========================================================= */
+
+.login-left {
+    position: relative;
+
+    width: 58%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   FOTO DE FONDO
+   ========================================================= */
+
+.login-background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/artes.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.02);
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   CAPA AZUL
+   ========================================================= */
+
+.login-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(120deg,
+            rgba(0, 40, 85, 0.90),
+            rgba(0, 67, 125, 0.70),
+            rgba(0, 40, 85, 0.55));
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTENIDO IZQUIERDO
+   ========================================================= */
+
+.brand-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 78%;
+
+    max-width: 700px;
+
+    color: white;
+
+    margin-top: -20px;
+}
+
+
+/* =========================================================
+   LOGO HORIZONTAL
+   ========================================================= */
+
+.horizontal-logo {
+    width: 390px;
+
+    max-width: 100%;
+
+    padding: 0;
+
+    margin-bottom: 35px;
+
+    background: transparent;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+.horizontal-logo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   JAVERSTOCK
+   ========================================================= */
+
+.brand-content h1 {
+    color: #ffffff;
+
+    font-size: clamp(52px, 5vw, 76px);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   LÍNEA DORADA
+   ========================================================= */
+
+.gold-line {
+    width: 100px;
+
+    height: 4px;
+
+    background: #e5b600;
+
+    margin-bottom: 22px;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+   ========================================================= */
+
+.brand-subtitle {
+    color: white;
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    margin-bottom: 14px;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+   ========================================================= */
+
+.brand-description {
+    max-width: 560px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   CARACTERÍSTICAS
+   ========================================================= */
+
+.features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.feature-icon {
+    width: 43px;
+    height: 43px;
+
+    min-width: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(229, 182, 0, 0.70);
+
+    border-radius: 10px;
+
+    color: #f0c000;
+
+    background: rgba(0, 30, 65, 0.35);
+
+    font-size: 17px;
+}
+
+
+.feature div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.feature strong {
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.feature span {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   PIE IZQUIERDO
+   ========================================================= */
+
+.left-footer {
+    position: absolute;
+
+    z-index: 6;
+
+    bottom: 22px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LADO DERECHO
+   ========================================================= */
+
+.login-right {
+    position: relative;
+
+    width: 42%;
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(145deg,
+            #f8fbff 0%,
+            #edf4fa 100%);
+}
+
+
+/* =========================================================
+   DECORACIONES
+   ========================================================= */
+
+.decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.decoration-one {
+    width: 330px;
+    height: 330px;
+
+    top: -250px;
+    right: -150px;
+
+    border: 30px solid rgba(0, 59, 120, 0.08);
+}
+
+
+.decoration-two {
+    width: 230px;
+    height: 230px;
+
+    bottom: -170px;
+    left: -130px;
+
+    border: 18px solid rgba(229, 182, 0, 0.13);
+}
+
+
+/* =========================================================
+   TARJETA
+   ========================================================= */
+
+.login-box {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    max-width: 440px;
+
+    padding: 38px 44px 30px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 20px 55px rgba(0, 40, 85, 0.14);
+}
+
+
+/* =========================================================
+   LOGO AZUL DEL FORMULARIO
+   ========================================================= */
+
+.form-logo {
+    width: 155px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.form-logo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.login-box h2 {
+    text-align: center;
+
+    color: #002855;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    margin: 0 0 5px;
+}
+
+
+/* =========================================================
+   BIENVENIDA
+   ========================================================= */
+
+.welcome {
+    text-align: center;
+
+    color: #7c8a9a;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.login-alert {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 13px;
+
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    background: #fff1f1;
+
+    border: 1px solid #f3cccc;
+
+    color: #a52828;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   GRUPOS
+   ========================================================= */
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 19px;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.form-group label {
+    display: block;
+
+    color: #28486a;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+   ========================================================= */
+
+.input-wrapper {
+    width: 100%;
+
+    height: 51px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #d4dde7;
+
+    border-radius: 9px;
+
+    transition: 0.2s ease;
+}
+
+
+.input-wrapper:focus-within {
+    border-color: #0054a6;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 84, 166, 0.08);
+}
+
+
+/* =========================================================
+   ICONO
+   ========================================================= */
+
+.input-icon {
+    width: 52px;
+
+    min-width: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #002f65;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.input-wrapper input {
+    flex: 1;
+
+    min-width: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 0 14px;
+
+    color: #24384e;
+
+    font-size: 14px;
+}
+
+
+.input-wrapper input::placeholder {
+    color: #a2adba;
+}
+
+
+/* =========================================================
+   BOTÓN MOSTRAR CONTRASEÑA
+   ========================================================= */
+
+.password-button {
+    width: 52px;
+
+    min-width: 52px;
+
+    border: none;
+
+    border-left: 1px solid #d4dde7;
+
+    background: white;
+
+    color: #7d8c9b;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.password-button:hover {
+    background: #f3f6f9;
+
+    color: #003b78;
+}
+
+
+/* =========================================================
+   BOTÓN LOGIN
+   ========================================================= */
+
+.btn-login {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 3px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(135deg,
+            #002855,
+            #0054a6);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 50, 100, 0.18);
+
+    transition: 0.25s ease;
+}
+
+
+.btn-login:hover {
+    background:
+        linear-gradient(135deg,
+            #00366f,
+            #0064bd);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 50, 100, 0.23);
+}
+
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ACCESO SEGURO
+   ========================================================= */
+
+.secure-login {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    color: #98a5b2;
+
+    font-size: 11px;
+}
+
+
+.secure-login i {
+    color: #d9ad00;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   PIE DERECHO
+   ========================================================= */
+
+.right-footer {
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 22px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    white-space: nowrap;
+}
+
+
+.right-footer>span {
+    width: 28px;
+
+    height: 1px;
+
+    background: #dfb400;
+}
+
+
+.right-footer div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.right-footer strong {
+    color: #174f88;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.right-footer small {
+    color: #8b98a6;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .login-left {
+        width: 55%;
+    }
+
+    .login-right {
+        width: 45%;
+
+        padding: 25px;
+    }
+
+    .brand-content {
+        width: 82%;
+    }
+
+    .horizontal-logo {
+        width: 320px;
+    }
+
+    .brand-content h1 {
+        font-size: 55px;
+    }
+
+    .brand-subtitle {
+        font-size: 17px;
+    }
+
+    .brand-description {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .login-left {
+        width: 50%;
+    }
+
+    .login-right {
+        width: 50%;
+    }
+
+    .horizontal-logo {
+        width: 270px;
+    }
+
+    .brand-content h1 {
+        font-size: 46px;
+    }
+
+    .brand-subtitle {
+        font-size: 15px;
+    }
+
+    .brand-description {
+        font-size: 12px;
+    }
+
+    .feature span {
+        display: none;
+    }
+
+    .login-box {
+        padding: 30px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .login-container {
+        display: block;
+
+        height: auto;
+
+        min-height: 100vh;
+    }
+
+    .login-left {
+        width: 100%;
+
+        height: 390px;
+    }
+
+    .login-right {
+        width: 100%;
+
+        min-height: 650px;
+
+        height: auto;
+
+        padding: 40px 20px 100px;
+    }
+
+    .brand-content {
+        width: 86%;
+    }
+
+    .horizontal-logo {
+        width: 280px;
+
+        margin-bottom: 25px;
+    }
+
+    .brand-content h1 {
+        font-size: 44px;
+    }
+
+    .brand-subtitle {
+        font-size: 16px;
+    }
+
+    .brand-description {
+        font-size: 13px;
+
+        margin-bottom: 25px;
+    }
+
+    .features {
+        gap: 10px;
+    }
+
+    .feature-icon {
+        width: 37px;
+        height: 37px;
+        min-width: 37px;
+    }
+
+    .left-footer {
+        display: none;
+    }
+
+    .login-box {
+        max-width: 460px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .login-left {
+        height: 350px;
+    }
+
+    .horizontal-logo {
+        width: 230px;
+    }
+
+    .brand-content h1 {
+        font-size: 38px;
+    }
+
+    .brand-subtitle {
+        font-size: 14px;
+    }
+
+    .brand-description {
+        font-size: 12px;
+    }
+
+    .feature strong {
+        font-size: 11px;
+    }
+
+    .login-right {
+        padding: 30px 15px 90px;
+    }
+
+    .login-box {
+        padding: 27px 20px;
+
+        border-radius: 17px;
+    }
+
+    .form-logo {
+        width: 135px;
+    }
+
+    .login-box h2 {
+        font-size: 27px;
+    }
+}

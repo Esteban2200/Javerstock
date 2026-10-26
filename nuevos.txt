@@ -1,0 +1,17 @@
+<div class="mt-4 text-center">
+
+                <a href="registro.php">
+
+                    Crear cuenta
+
+                </a>
+
+                |
+
+                <a href="recuperar_password.php">
+
+                    ¿Olvidó su contraseña?
+
+                </a>
+
+            </div>

@@ -1,0 +1,384 @@
+/* INVENTARIO.CSS - Estilos de la vista de inventario */
+
+.inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.inventory-header>div:last-child,
+.inventory-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.inventory-title h2 {
+    margin: 0;
+    font-size: 34px;
+    color: #002855;
+    font-weight: 700;
+}
+
+.inventory-title p {
+    margin: 6px 0 0;
+    color: #666;
+}
+
+.inventory-actions .btn,
+.inventory-header>div:last-child .btn {
+    min-height: 48px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Tabla */
+.inventario-table-wrap,
+.table-box {
+    width: 100%;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#tablaInventario {
+    width: 100% !important;
+    min-width: 1050px;
+    margin: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#tablaInventario thead th {
+    background: #002855;
+    color: #fff;
+    border: 0;
+    padding: 15px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+#tablaInventario thead th:first-child {
+    border-top-left-radius: 18px;
+}
+
+#tablaInventario thead th:last-child {
+    border-top-right-radius: 18px;
+}
+
+#tablaInventario tbody td {
+    padding: 13px 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf0f4;
+}
+
+#tablaInventario tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+#tablaInventario tbody tr:hover {
+    background: #f8fbff;
+}
+
+.inventario-thumb {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    background: #f5f7fb;
+    border: 1px solid #e7ebf0;
+}
+
+#tablaInventario .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#tablaInventario td:last-child {
+    white-space: nowrap;
+}
+
+#tablaInventario td:last-child .btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    margin: 2px;
+}
+
+/* Modales */
+.modal-content {
+    border: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .18);
+}
+
+.modal-header {
+    border-bottom: 0;
+    padding: 18px 22px;
+}
+
+.modal-body {
+    padding: 22px;
+}
+
+.modal-footer {
+    padding: 16px 22px;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.modal-body .form-control,
+.modal-body .form-select {
+    min-height: 44px;
+    border-radius: 10px;
+    border: 1px solid #dce2e8;
+}
+
+.modal-body .form-control:focus,
+.modal-body .form-select:focus {
+    border-color: #002855;
+    box-shadow: 0 0 0 .2rem rgba(0, 40, 85, .12);
+}
+
+/* Botones de los formularios */
+.modal-footer .btn {
+    min-height: 42px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width:992px) {
+    .inventory-header {
+        align-items: flex-start;
+    }
+
+    .inventory-header>div:last-child,
+    .inventory-actions {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .inventory-title h2 {
+        font-size: 27px;
+    }
+
+    .inventory-header>div:last-child,
+    .inventory-actions {
+        flex-direction: column;
+    }
+
+    .inventory-header>div:last-child .btn,
+    .inventory-actions .btn {
+        width: 100%;
+    }
+
+    .inventario-table-wrap,
+    .table-box {
+        border-radius: 12px;
+    }
+
+    .modal-dialog {
+        margin: 10px;
+    }
+
+    .modal-body {
+        padding: 16px;
+    }
+
+    .modal-footer {
+        padding: 14px 16px;
+    }
+}
+
+/* Botones de los formularios */
+.modal-footer .btn {
+    min-height: 42px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width:992px) {
+    .inventory-header {
+        align-items: flex-start;
+    }
+
+    .inventory-header>div:last-child,
+    .inventory-actions {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .inventory-title h2 {
+        font-size: 27px;
+    }
+
+    .inventory-header>div:last-child,
+    .inventory-actions {
+        flex-direction: column;
+    }
+
+    .inventory-header>div:last-child .btn,
+    .inventory-actions .btn {
+        width: 100%;
+    }
+
+    .inventario-table-wrap,
+    .table-box {
+        border-radius: 12px;
+    }
+
+    .modal-dialog {
+        margin: 10px;
+    }
+
+    .modal-body {
+        padding: 16px;
+    }
+
+    .modal-footer {
+        padding: 14px 16px;
+    }
+}
+
+/* ==========================================
+   COLUMNAS DE MOVIMIENTOS Y ACCIONES
+   ========================================== */
+
+.acciones-movimientos,
+.acciones-producto {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.acciones-movimientos .btn,
+.acciones-producto .btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    margin: 2px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acciones-movimientos .btn-success {
+    background: #16a34a;
+    border-color: #16a34a;
+}
+
+.acciones-movimientos .btn-warning {
+    background: #fbbf24;
+    border-color: #fbbf24;
+    color: #111;
+}
+
+.acciones-producto .btn-primary {
+    background: #002f65;
+    border-color: #002f65;
+}
+
+.acciones-producto .btn-danger {
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+.producto-imagen-tabla {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #d9e0e7;
+    background: #f8fafc;
+    padding: 4px;
+}
+
+.producto-sin-imagen {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+    border: 1px solid #d9e0e7;
+    background: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 10px;
+    text-align: center;
+}
+
+.producto-sin-imagen i {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.inventory-top-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.inventory-top-actions .btn {
+    min-height: 48px;
+    padding: 0 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.inventory-top-actions .btn-success {
+    background: #16a34a;
+    border-color: #16a34a;
+}
+
+.inventory-top-actions .btn-warning {
+    background: #fbbf24;
+    border-color: #fbbf24;
+    color: #111827;
+}
+
+@media (max-width: 768px) {
+    .inventory-top-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .inventory-top-actions .btn {
+        flex: 1;
+
+    }
+}

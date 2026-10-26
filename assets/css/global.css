@@ -1,0 +1,368 @@
+/*=========================================================
+                    JAVERSTOCK V3.0
+                    GLOBAL.CSS
+=========================================================*/
+
+/*=========================================================
+                    GOOGLE FONTS
+=========================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================================
+                    VARIABLES
+=========================================================*/
+
+:root {
+
+    --azul: #002855;
+    --azul-hover: #003d7a;
+
+    --dorado: #C99700;
+
+    --verde: #198754;
+    --rojo: #dc3545;
+    --amarillo: #ffc107;
+    --cyan: #0dcaf0;
+
+    --gris: #f5f7fb;
+    --gris2: #eef2f7;
+    --gris3: #d8dde5;
+
+    --texto: #2c3e50;
+
+    --blanco: #ffffff;
+
+    --radio: 18px;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, .08);
+
+}
+
+/*=========================================================
+                    RESET
+=========================================================*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: var(--gris);
+    color: var(--texto);
+    overflow-x: hidden;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+}
+
+button {
+
+    cursor: pointer;
+
+}
+
+input,
+select,
+textarea {
+
+    outline: none;
+
+}
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+/*=========================================================
+                    BOTONES
+=========================================================*/
+
+.btn {
+
+    border-radius: 12px;
+    transition: .30s;
+    font-weight: 600;
+
+}
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+/*=========================================================
+                    CARDS
+=========================================================*/
+
+.card {
+
+    border: none;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+
+}
+
+/*=========================================================
+                    FORMULARIOS
+=========================================================*/
+
+.form-control,
+.form-select {
+
+    border-radius: 12px;
+    min-height: 48px;
+    border: 1px solid #dcdcdc;
+
+}
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color: var(--azul);
+    box-shadow: 0 0 0 .2rem rgba(0, 40, 85, .15);
+
+}
+
+/*=========================================================
+                    MODALES
+=========================================================*/
+
+.modal-content {
+
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+
+}
+
+.modal-header {
+
+    background: var(--azul);
+    color: white;
+    border: none;
+
+}
+
+.modal-header .btn-close {
+
+    filter: invert(1);
+
+}
+
+/*=========================================================
+                    BADGES
+=========================================================*/
+
+.badge {
+
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+
+}
+
+.bg-success {
+
+    background: #198754 !important;
+
+}
+
+.bg-warning {
+
+    background: #ffc107 !important;
+    color: #222 !important;
+
+}
+
+.bg-danger {
+
+    background: #dc3545 !important;
+
+}
+
+.bg-primary {
+
+    background: #002855 !important;
+
+}
+
+/*=========================================================
+                    TABLAS
+=========================================================*/
+
+.table {
+
+    margin-bottom: 0;
+
+}
+
+.table thead {
+
+    background: var(--azul);
+    color: white;
+
+}
+
+.table thead th {
+
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.table tbody td {
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+/*=========================================================
+                    SCROLL
+=========================================================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #ececec;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #002855;
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #C99700;
+
+}
+
+/*=========================================================
+                    ANIMACIONES
+=========================================================*/
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes zoomIn {
+
+    from {
+
+        transform: scale(.95);
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+        opacity: 1;
+
+    }
+
+}
+
+.fadeIn {
+
+    animation: fadeIn .5s;
+
+}
+
+.zoomIn {
+
+    animation: zoomIn .4s;
+
+}
+
+/*=========================================================
+                    RESPONSIVE
+=========================================================*/
+
+@media(max-width:992px) {
+
+    .container {
+
+        width: 100%;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .table-responsive {
+
+        overflow-x: auto;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+}
